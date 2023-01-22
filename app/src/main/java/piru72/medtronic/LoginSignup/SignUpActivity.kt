@@ -4,22 +4,23 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import piru72.medtronic.databinding.ActivityRegisterBinding
+import piru72.medtronic.databinding.ActivitySignupBinding
+
 
 class SignUpActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRegisterBinding
+    private lateinit var binding: ActivitySignupBinding
     private lateinit var firebaseAuth: FirebaseAuth
     private var helper = HelperSignInSignUp(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        binding = ActivitySignupBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.signupBtn.setOnClickListener {
-//            val intent = Intent(this, LoginActivity::class.java)
+//            val intent = Intent(this, SignInActivity::class.java)
 //            startActivity(intent)
 
             val email = binding.usersEmail.text.toString()
@@ -31,7 +32,7 @@ class SignUpActivity : AppCompatActivity() {
             if (validityStatus == "Valid Data") {
 
                 if (fireBaseSignup(email, password)) {
-                    val intent = Intent(this, LoginActivity::class.java)
+                    val intent = Intent(this, SignInActivity::class.java)
                     startActivity(intent)
                 }
 
@@ -43,7 +44,7 @@ class SignUpActivity : AppCompatActivity() {
 
         binding.goToSignInPage.setOnClickListener {
 
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
     }
