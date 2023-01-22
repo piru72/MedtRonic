@@ -50,6 +50,11 @@ class SignInActivity : AppCompatActivity() {
             }
         }
 
+        binding.goToSignUpPage.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     public override fun onStart() {
