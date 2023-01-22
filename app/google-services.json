@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "343329938557",
+    "project_id": "piru72-medtronic",
+    "storage_bucket": "piru72-medtronic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343329938557:android:4e0547cd2d2c6374bce514",
+        "android_client_info": {
+          "package_name": "piru72.medtronic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343329938557-lintufuep40dijv53vm21sl2hurebmjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmax5rTRELAPOP_AooAx3nQzGKiOQOah0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343329938557-lintufuep40dijv53vm21sl2hurebmjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
