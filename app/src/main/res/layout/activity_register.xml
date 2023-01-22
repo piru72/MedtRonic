@@ -6,4 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".LoginSignup.RegisterActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:layout_marginTop="20sp"
+            android:src="@drawable/medtronic_icon" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/users_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:background="@color/white"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:hint="Type your Email"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/password_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:passwordToggleEnabled="true">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usersPasswordType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:background="@color/white"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:hint="Type your Password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/password_signup_retype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            android:layout_below="@id/password_signup"
+            app:passwordToggleEnabled="true">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usersPasswordRetype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:layout_margin="20sp"
+                android:hint="Re Type your Password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+
+            android:id="@+id/signupBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:background="@color/white"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+
+
+            android:text="Sign up"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+
+            android:id="@+id/go_to_sign_in_page"
+            android:layout_width="362dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="49dp"
+            android:padding="5dp"
+            android:text="   Already have an account? Sign in"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
