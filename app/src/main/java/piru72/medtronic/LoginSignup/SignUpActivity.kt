@@ -26,8 +26,9 @@ class SignUpActivity : AppCompatActivity() {
             val email = binding.usersEmail.text.toString()
             val password = binding.usersPasswordType.text.toString()
             val passwordRetype = binding.usersPasswordRetype.text.toString()
+            val name = binding.usersName.text.toString()
 
-            val validityStatus = helper.validateEmailPasswordFormat(email, password, passwordRetype)
+            val validityStatus = helper.validateEmailPasswordFormat(email, password, passwordRetype,name)
 
             if (validityStatus == "Valid Data") {
 

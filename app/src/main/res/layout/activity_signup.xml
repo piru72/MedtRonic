@@ -18,6 +18,25 @@
             android:src="@drawable/medtronic_icon" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/users_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:background="@color/white"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:hint="Enter your Full Name"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -31,7 +50,7 @@
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
 
-                android:hint="Type your Email"
+                android:hint="Enter your Email"
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -53,7 +72,7 @@
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
 
-                android:hint="Type your Password"
+                android:hint="Enter your Password"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -78,7 +97,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
 
                 android:layout_margin="20sp"
-                android:hint="Re Type your Password"
+                android:hint="Confirm your Password"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>

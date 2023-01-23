@@ -16,7 +16,35 @@ class HelperSignInSignUp(private val applicationContext : Context) {
         pass: String,
         passRetype: String
     ): String {
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
+            return "Invalid email format"
+        else if (email.length >= 50)
+            return "Too long characters"
+        else if (TextUtils.isEmpty(pass))
+            return "Enter a password"
+        else if (pass.length <= 6)
+            return "Password is too short"
+        else if (pass != passRetype)
+            return "Passwords didn't match retype passwords"
+        else if (pass.contains("@") || pass.contains("#") || pass.contains("%") || pass.contains("$") || pass.contains(
+                "*"
+            )
+        )
+            return "Valid Data"
+        else
+            return "Give a special character such as @,$,#.."
 
+    }
+
+    fun validateEmailPasswordFormat(
+        email: String,
+        pass: String,
+        passRetype: String,
+        name: String
+    ): String {
+
+        if ( name.length < 3)
+            makeToast("Enter a valid name")
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
             return "Invalid email format"
         else if (email.length >= 50)
