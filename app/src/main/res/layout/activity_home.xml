@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_color_light"
     tools:context=".HomeActivity">
 
 
@@ -12,34 +13,39 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/background_btn"
             android:text="Button" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/background_btn"
             android:text="Button" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/background_btn"
             android:text="Button" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/background_btn"
             android:text="Button" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/logoutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/background_btn"
             android:text="Log Out" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

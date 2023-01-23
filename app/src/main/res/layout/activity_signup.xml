@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_color_light"
     tools:context=".LoginSignup.SignUpActivity">
 
     <LinearLayout
@@ -15,7 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="200sp"
             android:layout_marginTop="20sp"
-            android:src="@drawable/medtronic_icon" />
+            android:src="@drawable/sign_up_image" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gets Things Done With TODo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lets Connect your friend easyle"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name_signup"
@@ -95,25 +104,24 @@
                 android:background="@color/white"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-
                 android:layout_margin="20sp"
                 android:hint="Confirm your Password"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
 
             android:id="@+id/signupBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20sp"
-            android:background="@color/white"
+            android:background="@drawable/background_btn"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
 
 
-            android:text="Sign up"
+            android:text="Register"
             android:textSize="20sp"
             android:textColor="@color/black" />
 
@@ -128,6 +136,7 @@
             android:text="   Already have an account? Sign in"
             android:textAlignment="center"
             android:textSize="15sp"
+
             android:textStyle="bold" />
 
     </LinearLayout>

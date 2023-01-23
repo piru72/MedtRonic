@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_color_light"
     tools:context=".LoginSignup.SignInActivity">
 
     <LinearLayout
@@ -17,7 +18,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200sp"
-            android:src="@drawable/medtronic_icon" />
+            android:src="@drawable/sign_in_image" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_signin"
@@ -29,13 +30,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20sp"
-                android:hint="Type your Email"
-                android:textColor="@color/black"
                 android:background="@color/white"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
+                android:hint="Type your Email"
+                android:inputType="textEmailAddress"
 
-                android:inputType="textEmailAddress" />
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,11 +55,11 @@
                 android:layout_margin="20sp"
                 android:background="@color/white"
                 android:focusable="true"
-                android:textColor="@color/black"
                 android:foreground="?android:attr/selectableItemBackground"
-
                 android:hint="Type your Password"
-                android:inputType="textPassword" />
+
+                android:inputType="textPassword"
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,28 +73,24 @@
             android:textAlignment="textEnd"
             android:textSize="15dp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
 
             android:id="@+id/signinBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20sp"
-            android:background="@color/white"
+            android:background="@drawable/background_btn"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-
-
             android:text="Sign in"
-
-            android:textSize="20sp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
 
             android:id="@+id/goToSignUpPage"
             android:layout_width="359dp"
             android:layout_height="65dp"
-
             android:layout_marginBottom="74dp"
             android:padding="5dp"
             android:text="   Don't have an account? Sign up"
