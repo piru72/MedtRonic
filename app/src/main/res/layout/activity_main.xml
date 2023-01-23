@@ -16,7 +16,7 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/medtronic_icon" />
+            app:srcCompat="@drawable/medtronic_icon_trans" />
 
         <TextView
             android:id="@+id/textview_title"
