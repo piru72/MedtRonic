@@ -78,6 +78,8 @@ class SignUpActivity : AppCompatActivity() {
             if (task.isSuccessful) {
                 helper.makeToast("Verification mail has been sent on the email ")
                 helper.makeToast("CHECK YOUR EMAILS SPAM BOX FOR VERIFICATION EMAIL")
+                val intent = Intent(this, SignInActivity::class.java)
+                startActivity(intent)
             } else {
 
                 helper.makeToast("Error Occurred")

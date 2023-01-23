@@ -21,8 +21,6 @@ class HelperSignInSignUp(private val applicationContext : Context) {
             return "Invalid email format"
         else if (email.length >= 50)
             return "Too long characters"
-        else if (!email.contains("@aust.edu"))
-            return "Provide your @aust.edu email"
         else if (TextUtils.isEmpty(pass))
             return "Enter a password"
         else if (pass.length <= 6)
