@@ -3,5 +3,5 @@
     android:shape="rectangle" android:padding="10dp">
     <!-- you can use any color you want I used here gray color-->
     <solid android:color="@color/btn_red"/>
-    <corners android:radius="10dp"/>
+    <corners android:radius="20dp"/>
 </shape>
