@@ -55,6 +55,11 @@ class SignInActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.goToForgotPasswrdFragment.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     public override fun onStart() {

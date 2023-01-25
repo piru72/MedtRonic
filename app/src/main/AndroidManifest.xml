@@ -13,6 +13,13 @@
         android:theme="@style/Theme.MedtRonic"
         tools:targetApi="31">
         <activity
+            android:name=".LoginSignup.ForgotPasswordActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".HomeTab.SosActivity"
             android:exported="false">
             <meta-data
