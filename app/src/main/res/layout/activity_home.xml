@@ -4,8 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bk_img"
+    android:background="@drawable/bk_img2"
     tools:context=".HomeActivity">
+
+    <ImageView
+        android:layout_width="218dp"
+        android:layout_height="181dp"
+        android:src="@drawable/bauble_area" />
 
 <!--
     <LinearLayout
