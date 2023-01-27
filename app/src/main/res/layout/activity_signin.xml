@@ -4,8 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bk_img"
+    android:background="@drawable/bk_img2"
     tools:context=".LoginSignup.SignInActivity">
+
+    <ImageView
+        android:layout_width="218dp"
+        android:layout_height="181dp"
+        android:src="@drawable/bauble_area"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/activity_sign_in"
@@ -15,6 +21,8 @@
         android:gravity="center"
         android:orientation="vertical">
 
+
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="280dp"
@@ -23,8 +31,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_signin"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
+            android:background="@null"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -35,8 +44,6 @@
                 android:layout_marginTop="40dp"
 
                 android:background="@drawable/textfield"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:hint="Enter your Email"
                 android:inputType="textEmailAddress"
 
@@ -59,8 +66,6 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/textfield"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:hint="Enter your Password"
 
                 android:inputType="textPassword"

@@ -4,8 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bk_img"
+    android:background="@drawable/bk_img2"
     tools:context=".LoginSignup.SignUpActivity">
+
+    <ImageView
+        android:layout_width="218dp"
+        android:layout_height="181dp"
+        android:src="@drawable/bauble_area"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,8 +53,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/textfield"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
 
                 android:hint="Enter your Full Name"
                 android:inputType="text" />
@@ -68,8 +72,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/textfield"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
 
                 android:hint="Enter your Email"
                 android:inputType="textEmailAddress" />
@@ -92,9 +94,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/textfield"
-
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
 
                 android:hint="Enter your Password"
                 android:inputType="textPassword" />
@@ -120,8 +119,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/textfield"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_margin="0sp"
                 android:hint="Confirm your Password"
                 android:inputType="textPassword" />
