@@ -26,7 +26,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="280dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="150dp"
             android:src="@drawable/sign_in_png" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -41,7 +41,7 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
 
                 android:background="@drawable/textfield"
                 android:hint="Enter your Email"
@@ -64,7 +64,7 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/textfield"
                 android:hint="Enter your Password"
 
