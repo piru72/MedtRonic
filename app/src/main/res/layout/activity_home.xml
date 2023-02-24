@@ -13,47 +13,7 @@
         android:src="@drawable/bauble_area"
         tools:ignore="MissingConstraints" />
 
-<!--
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_btn"
-            android:text="Button" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_btn"
-            android:text="Button" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_btn"
-            android:text="Button" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_btn"
-            android:text="Button" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/logoutButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_btn"
-            android:text="Log Out" />
-    </LinearLayout>-->
 
 
     <LinearLayout

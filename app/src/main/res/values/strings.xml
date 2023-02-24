@@ -5,4 +5,7 @@
     <string name="send_file">SEND FILE</string>
     <string name="start">START</string>
     <string name="stop">STOP</string>
+    <string name="user_name">User Name</string>
+    <string name="send_message_image">SEND MESSAGE IMAGE</string>
+    <string name="message">Message</string>
 </resources>
