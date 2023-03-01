@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/senderLayout"
+        android:layout_margin="1dp"
+
+        android:layout_gravity="right">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_mic_foreground"
+            android:background="@drawable/background_sender_left"
+            android:id="@+id/sender_play_audio"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Audio File"
+            android:gravity="center"
+            android:background="@drawable/background_sender_right"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:padding="8dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/receiverLayout"
+        android:layout_margin="1dp"
+        android:layout_gravity="left">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_mic_foreground"
+            android:background="@drawable/background_receiver_left"
+            android:id="@+id/receiverPlayAudio"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Audio File"
+            android:gravity="center"
+            android:background="@drawable/background_receiver_right"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="8dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
