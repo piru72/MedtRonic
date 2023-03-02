@@ -8,6 +8,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import piru72.medtronic.HomeTab.SendPulseActivity
 import piru72.medtronic.LoginSignup.SignInActivity
 import piru72.medtronic.LoginSignup.SignUpActivity
 import piru72.medtronic.databinding.ActivityMainBinding
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     private fun updateUI(currentUser: FirebaseUser?) {
         if (currentUser != null) {
             Log.i("LoginActivity", "Update UI Called")
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, SendPulseActivity::class.java)
             startActivity(intent)
             finish()
         }

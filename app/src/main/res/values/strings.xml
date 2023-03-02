@@ -8,4 +8,5 @@
     <string name="user_name">User Name</string>
     <string name="send_message_image">SEND MESSAGE IMAGE</string>
     <string name="message">Message</string>
+    <string name="press_start_to_record">PRESS START TO RECORD</string>
 </resources>
