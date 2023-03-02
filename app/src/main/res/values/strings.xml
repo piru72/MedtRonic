@@ -9,4 +9,10 @@
     <string name="send_message_image">SEND MESSAGE IMAGE</string>
     <string name="message">Message</string>
     <string name="press_start_to_record">PRESS START TO RECORD</string>
+    <string name="send_message_button">Send Message Button</string>
+    <string name="send_audio_button">Send audio button</string>
+    <string name="gallery_button">Gallery button</string>
+    <string name="demo_user_name">PARVEZ AHAMMED</string>
+    <string name="demo_profile_photo">Demo profile Photo</string>
+    <string name="send_audio_icon">Send audio icon</string>
 </resources>

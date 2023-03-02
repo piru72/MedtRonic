@@ -46,7 +46,7 @@ class SendPulseActivity : AppCompatActivity() {
             )
         }
 
-        binding.textViewUserName.text = "PARVEZ AHAMMED"
+
         binding.buttonSendAudio.setOnClickListener {
             val rootLayout = layoutInflater.inflate(R.layout.popup_audio_recording, null)
             val label = rootLayout.findViewById<TextView>(R.id.textviewRecordingState)
