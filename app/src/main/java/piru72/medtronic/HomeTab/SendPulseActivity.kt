@@ -1,7 +1,6 @@
 package piru72.medtronic.HomeTab
 
 import android.Manifest
-import android.Manifest.permission.RECORD_AUDIO
 import android.content.pm.PackageManager
 import android.media.MediaPlayer
 import android.media.MediaRecorder
@@ -17,13 +16,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.ktx.storage
 
 import piru72.medtronic.R
+import piru72.medtronic.database.ChildUpdaterHelper
 import piru72.medtronic.databinding.ActivitySendPulseBinding
+import piru72.medtronic.utils.model.AudioMessage
 
 import java.io.File
 
@@ -31,6 +30,8 @@ import java.io.File
 class SendPulseActivity : AppCompatActivity() {
     private lateinit var recorder: MediaRecorder
     private val RECORD_AUDIO_PERMISSION_CODE = 1
+
+    private var PUSH_KEY= ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,8 +74,18 @@ class SendPulseActivity : AppCompatActivity() {
             )
             startRecording .setOnClickListener {
                 label.text = "RECORDING......."
+
+                val databaseReference = FirebaseDatabase.getInstance().getReference("audio-messages")
+                val pushKey = databaseReference.push().key
+
+
                 Toast.makeText(applicationContext, "Recording Started", Toast.LENGTH_SHORT).show()
+
+
                 if (!isRecording) {
+                    if (pushKey != null) {
+                        PUSH_KEY = pushKey
+                    }
                     startRecording()
                     isRecording = true
                 }
@@ -96,7 +107,7 @@ class SendPulseActivity : AppCompatActivity() {
                 if (!folder.exists()) {
                     folder.mkdirs()
                 }
-                val outputFile = File(folder, "recording.3gp")
+                val outputFile = File(folder, "$PUSH_KEY.3gp")
 
                 val audioRef = storageRef.child("audio/${outputFile.name}")
 
@@ -108,6 +119,12 @@ class SendPulseActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         audioRef.downloadUrl.addOnSuccessListener { uri ->
                             val audioUrl = uri.toString()
+
+                            val firebaseChildHelper = ChildUpdaterHelper()
+
+                            val audioDetails = AudioMessage(audioUrl,"parvez","tamzid vai ", "april 7",PUSH_KEY)
+
+                            firebaseChildHelper.writeNewAudioMessage(audioDetails)
                             Toast.makeText(applicationContext, "Audio uploaded to firebase!!", Toast.LENGTH_SHORT).show()
                             label.text = "SENT"
                             hearRecording.visibility = View.VISIBLE
@@ -163,14 +180,20 @@ class SendPulseActivity : AppCompatActivity() {
         }
     }
 
+
+
     private fun startRecording() {
         recorder.setAudioSource(MediaRecorder.AudioSource.MIC)
         recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
+
         val folder = File(filesDir, "MyAudioFolder")
         if (!folder.exists()) {
             folder.mkdirs()
         }
-        val outputFile = File(folder, "recording.3gp")
+
+        Toast.makeText(applicationContext, "Push key is $PUSH_KEY", Toast.LENGTH_SHORT).show()
+
+        val outputFile = File(folder, "$PUSH_KEY.3gp")
 
         recorder.setOutputFile(outputFile.absolutePath)
         recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
