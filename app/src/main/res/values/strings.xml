@@ -19,4 +19,5 @@
     <string name="delete">Delete</string>
 
     <string name="website_name">Website Name</string>
+    <string name="audio_message">Audio Message</string>
 </resources>

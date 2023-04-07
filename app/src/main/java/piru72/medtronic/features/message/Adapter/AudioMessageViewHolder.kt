@@ -11,7 +11,6 @@ import java.io.File
 class AudioMessageViewHolder(private val binding: CardAudioMessageBinding) :
     RecyclerView.ViewHolder(binding.root) {
     fun bind(currentGroup: AudioMessage) {
-        binding.websiteNameCard.text = currentGroup.sender
 
 
         binding.deleteWebsiteButton.setOnClickListener {
