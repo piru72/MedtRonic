@@ -1,12 +1,14 @@
 package piru72.medtronic.HomeTab
 
 import android.Manifest
+import android.content.Context
 import android.content.pm.PackageManager
 import android.media.MediaPlayer
 import android.media.MediaRecorder
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
 import android.widget.Button
@@ -16,14 +18,19 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 
 import piru72.medtronic.R
 import piru72.medtronic.database.ChildUpdaterHelper
 import piru72.medtronic.databinding.ActivitySendPulseBinding
+import piru72.medtronic.features.message.Adapter.AudioMessageViewHolder
+import piru72.medtronic.features.message.Adapter.MessageAdapter
+import piru72.medtronic.features.message.Model.MessageModel
 import piru72.medtronic.utils.model.AudioMessage
-
 import java.io.File
 
 
@@ -31,11 +38,29 @@ class SendPulseActivity : AppCompatActivity() {
     private lateinit var recorder: MediaRecorder
     private val RECORD_AUDIO_PERMISSION_CODE = 1
 
+    private lateinit var recycler: RecyclerView
+    private lateinit var adapter: MessageAdapter
+    private lateinit var viewModel: MessageModel
+
     private var PUSH_KEY= ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivitySendPulseBinding.inflate(layoutInflater)
+
+        recycler =binding.recycleViewMessages
+        recycler.layoutManager = LinearLayoutManager(applicationContext)
+        recycler.setHasFixedSize(true)
+        adapter = MessageAdapter()
+        recycler.adapter = adapter
+        viewModel = ViewModelProvider(this)[MessageModel::class.java]
+
+        viewModel.allUserGroups.observe(this) {
+            adapter.updateUserGroupList(it)
+        }
+
+
         setContentView(binding.root)
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)

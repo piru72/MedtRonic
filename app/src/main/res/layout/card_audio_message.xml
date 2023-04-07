@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/backgroundCard">
+
+    <LinearLayout style="@style/layoutMatchParentHorizontal">
+
+        <TextView
+            android:id="@+id/websiteNameCard"
+            style="@style/textViewWrapWrapPoppinsBlack"
+            android:text="@string/website_name"
+            android:textSize="25sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/deleteWebsiteButton"
+            style="@style/buttonStyleCard"
+            android:text="@string/delete" />
+
+    </LinearLayout>
+
+</LinearLayout>

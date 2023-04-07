@@ -14,5 +14,7 @@
     <color name="btn_red">#FA5656</color>
     <color name="text_clr">#0A3FFE</color>
 
+    <color name="background_color_50">#B3FFFFFF</color>
+
 
 </resources>

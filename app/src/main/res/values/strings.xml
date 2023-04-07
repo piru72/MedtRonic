@@ -15,4 +15,8 @@
     <string name="demo_user_name">PARVEZ AHAMMED</string>
     <string name="demo_profile_photo">Demo profile Photo</string>
     <string name="send_audio_icon">Send audio icon</string>
+
+    <string name="delete">Delete</string>
+
+    <string name="website_name">Website Name</string>
 </resources>

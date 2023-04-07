@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="layoutMatchParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+
+    </style>
+
+    <style name="layoutMatchWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layoutWrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layoutMatchWrapVertical" parent="layoutMatchWrap">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="layoutWrapWrapHorizontal" parent="layoutWrapContent">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="layoutMatchParentVertical" parent="layoutMatchParent">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="layoutMatchParentHorizontal" parent="layoutMatchParent">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+
+
+
+    <style name="backgroundCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:background">@color/background_color_50</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">10sp</item>
+
+    </style>
+
+    <style name="layoutWrapContentVertical" parent="layoutWrapContent">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="layoutMatchWrapHorizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+
+    </style>
+
+    <style name="buttonStyleCard">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/cardview_compat_inset_shadow</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/background_color_50</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="textViewWrapWrapPoppinsBlack" parent="layoutWrapContent">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

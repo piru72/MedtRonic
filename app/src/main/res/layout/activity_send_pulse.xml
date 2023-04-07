@@ -37,13 +37,18 @@
 
     </LinearLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewMessages"
+        style="@style/layoutMatchWrap" />
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="471dp"
         android:layout_gravity="top"
         android:contentDescription="@string/send_message_image"
-        app:srcCompat="@drawable/img_chat" />
+        app:srcCompat="@drawable/img_chat"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/layoutSenderBox"
