@@ -3,8 +3,11 @@ package piru72.medtronic.HomeTab
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
+import android.media.AudioFormat
+import android.media.AudioRecord
 import android.media.MediaPlayer
 import android.media.MediaRecorder
+import android.media.audiofx.NoiseSuppressor
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -32,6 +35,8 @@ import piru72.medtronic.features.message.Adapter.MessageAdapter
 import piru72.medtronic.features.message.Model.MessageModel
 import piru72.medtronic.utils.model.AudioMessage
 import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
 
 
 class SendPulseActivity : AppCompatActivity() {
@@ -133,12 +138,14 @@ class SendPulseActivity : AppCompatActivity() {
                     folder.mkdirs()
                 }
                 val outputFile = File(folder, "$PUSH_KEY.3gp")
+                val suppressedOutputFile = File(folder, "${PUSH_KEY}_s.3gp")
+                applyNoiseSuppression(outputFile.absolutePath, suppressedOutputFile.absolutePath)
 
                 val audioRef = storageRef.child("audio/${outputFile.name}")
-
-
-
                 val uploadTask = audioRef.putFile(Uri.fromFile(outputFile))
+
+                //val audioRef = storageRef.child("audio/${suppressedOutputFile.name}")
+                //val uploadTask = audioRef.putFile(Uri.fromFile(suppressedOutputFile))
 
                 uploadTask.addOnCompleteListener { task ->
                     if (task.isSuccessful) {
@@ -233,7 +240,66 @@ class SendPulseActivity : AppCompatActivity() {
 
 
 
+    // Apply noise suppression to audio file
+    fun applyNoiseSuppression(inputFilePath: String, outputFilePath: String) {
+        val SAMPLE_RATE = 44100
+        val bufferSize = AudioRecord.getMinBufferSize(
+            SAMPLE_RATE,
+            AudioFormat.CHANNEL_IN_MONO,
+            AudioFormat.ENCODING_PCM_16BIT
+        )
 
+        val inputFile = File(inputFilePath)
+        val outputFile = File(outputFilePath)
+
+        val inputStream = FileInputStream(inputFile)
+        val outputStream = FileOutputStream(outputFile)
+
+        val buffer = ByteArray(bufferSize)
+        var bytesRead: Int
+
+        if (ContextCompat.checkSelfPermission(
+                applicationContext,
+                Manifest.permission.RECORD_AUDIO
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            // TODO: Request the necessary permission or handle the lack of permission accordingly
+            return
+        }
+
+        val audioRecord = AudioRecord(
+            MediaRecorder.AudioSource.DEFAULT,
+            SAMPLE_RATE,
+            AudioFormat.CHANNEL_IN_MONO,
+            AudioFormat.ENCODING_PCM_16BIT,
+            bufferSize
+        )
+
+        // Check if noise suppression is available on the device
+        if (NoiseSuppressor.isAvailable()) {
+            val noiseSuppressor = NoiseSuppressor.create(audioRecord.audioSessionId)
+            noiseSuppressor.enabled = true
+        }
+
+        audioRecord.startRecording()
+
+        while (inputStream.read(buffer).also { bytesRead = it } != -1) {
+            // Apply noise suppression to the audio buffer
+            audioRecord.read(buffer, 0, bytesRead)
+
+            // Write the processed buffer to the output file
+            outputStream.write(buffer, 0, bytesRead)
+        }
+
+        audioRecord.stop()
+        audioRecord.release()
+
+
+        // Close input/output streams
+        inputStream.close()
+        outputStream.close()
+        Toast.makeText(this, "Record suppressed", Toast.LENGTH_SHORT).show()
+    }
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,
