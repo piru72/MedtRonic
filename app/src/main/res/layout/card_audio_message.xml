@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/layoutWrapContent">
 
     <LinearLayout style="@style/layoutMatchParentHorizontal">
@@ -8,6 +9,7 @@
             android:id="@+id/deleteWebsiteButton"
             style="@style/buttonStyleCard"
             android:drawableLeft="@drawable/ic_baseline_play_arrow_24"
+            app:backgroundTint="@color/btn_red"
             android:text="@string/audio_message" />
 
     </LinearLayout>

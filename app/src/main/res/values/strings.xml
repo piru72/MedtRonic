@@ -20,4 +20,5 @@
 
     <string name="website_name">Website Name</string>
     <string name="audio_message">Audio Message</string>
+    <string name="record_audio">Record Audio</string>
 </resources>

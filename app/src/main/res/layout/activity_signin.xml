@@ -34,16 +34,17 @@
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:background="@null"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/btn_red"
+            app:boxStrokeColor="@color/btn_red"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersEmail"
-                android:layout_width="320dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-                android:background="@drawable/textfield"
                 android:hint="Enter your Email"
                 android:inputType="textEmailAddress"
 
@@ -51,21 +52,24 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+
+
         <com.google.android.material.textfield.TextInputLayout
 
             android:id="@+id/password_signin"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:background="@null"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/btn_red"
+            app:boxStrokeColor="@color/btn_red"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPassword"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/textfield"
                 android:hint="Enter your Password"
 
                 android:inputType="textPassword"

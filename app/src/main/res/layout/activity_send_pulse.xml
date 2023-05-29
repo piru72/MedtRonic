@@ -31,7 +31,7 @@
             android:layout_height="match_parent"
             android:layout_weight="18"
             android:gravity="center"
-            android:text="@string/demo_user_name"
+            android:text="@string/user_name"
             android:textSize="20sp" />
 
 
@@ -55,56 +55,72 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
         android:layout_weight="1"
         android:orientation="horizontal"
         android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/buttonSendImage"
-            android:layout_width="30dp"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:contentDescription="@string/gallery_button"
-            android:src="@drawable/ic_gallery_foreground"
-            tools:ignore="NestedWeights" />
+<!--        <ImageView-->
+<!--            android:id="@+id/buttonSendImage"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_weight="1"-->
+<!--            android:contentDescription="@string/gallery_button"-->
+<!--            android:src="@drawable/ic_gallery_foreground"-->
+<!--            tools:ignore="NestedWeights" />-->
 
-        <ImageView
+<!--        <ImageView-->
+
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_gravity="bottom"-->
+
+<!--            android:layout_weight="1"-->
+<!--            android:contentDescription="@string/send_audio_icon"-->
+<!--            android:src="@drawable/ic_mic_foreground" />-->
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:background="@null"-->
+<!--            app:errorEnabled="true"-->
+<!--            app:hintTextColor="@color/btn_red"-->
+<!--            app:boxStrokeColor="@color/btn_red"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_weight="18">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/send_message_field"-->
+<!--                android:hint="@string/message"-->
+<!--                android:textColorHint="#616161" />-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/buttonStyleFloat"
             android:id="@+id/buttonSendAudio"
-            android:layout_width="30dp"
-            android:layout_height="50dp"
+            android:src="@drawable/ic_mic_foreground"
+            android:scaleType="center"
+            app:maxImageSize="56dp"
+            app:fabCustomSize="64dp"
             android:layout_gravity="bottom"
+            app:tint="@color/btn_red"
+            android:contentDescription="@string/record_audio" />
 
-            android:layout_weight="1"
-            android:contentDescription="@string/send_audio_icon"
-            android:src="@drawable/ic_mic_foreground" />
+<!--        <ImageView-->
+<!--            android:id="@+id/buttonSendMessage"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_weight="1"-->
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom"
-
-            android:layout_weight="18">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/send_message_field"
-                android:hint="@string/message"
-                android:textColorHint="#616161" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <ImageView
-            android:id="@+id/buttonSendMessage"
-            android:layout_width="30dp"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-
-            android:contentDescription="@string/send_message_button"
-            android:src="@drawable/icon_send_button" />
+<!--            android:contentDescription="@string/send_message_button"-->
+<!--            android:src="@drawable/icon_send_button" />-->
 
 
     </LinearLayout>

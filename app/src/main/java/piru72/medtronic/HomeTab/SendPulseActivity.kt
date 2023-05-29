@@ -159,7 +159,8 @@ class SendPulseActivity : AppCompatActivity() {
                             firebaseChildHelper.writeNewAudioMessage(audioDetails)
                             Toast.makeText(applicationContext, "Audio uploaded to firebase!!", Toast.LENGTH_SHORT).show()
                             label.text = "SENT"
-                            hearRecording.visibility = View.VISIBLE
+                            //hearRecording.visibility = View.VISIBLE
+                            popupWindow.dismiss()
 
 
 
@@ -223,7 +224,7 @@ class SendPulseActivity : AppCompatActivity() {
             folder.mkdirs()
         }
 
-        Toast.makeText(applicationContext, "Push key is $PUSH_KEY", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(applicationContext, "Push key is $PUSH_KEY", Toast.LENGTH_SHORT).show()
 
         val outputFile = File(folder, "$PUSH_KEY.3gp")
 
@@ -298,7 +299,7 @@ class SendPulseActivity : AppCompatActivity() {
         // Close input/output streams
         inputStream.close()
         outputStream.close()
-        Toast.makeText(this, "Record suppressed", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "Record suppressed", Toast.LENGTH_SHORT).show()
     }
     override fun onRequestPermissionsResult(
         requestCode: Int,

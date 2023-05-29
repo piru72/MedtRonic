@@ -9,5 +9,15 @@ y
 Iapp/src/main/java/piru72/medtronic/features/message/Model/MessageModel.kt,d\1\d138f5281729d077919274e73532157924b4c895
 }
 Mapp/src/main/java/piru72/medtronic/features/message/Repository/MessageRepo.kt,b\5\b52ddf75bcd1abb1d59067ff18c459857ff4fc3c
-Ö
-Uapp/src/main/java/piru72/medtronic/features/message/Adapter/AudioMessageViewHolder.kt,7\9\797964a2771421b3dabc9f55e9e16bc08f6a6369
+w
+G.idea/sonarlint/issuestore/3/5/35c075371232e7a6d7c2893f452f528d008ddb9a,b\b\bb121c7f2d39391fd76cbf7b2237e4f054c27e9f
+Å
+Q.idea/sonarlint/securityhotspotstore/d/1/d138f5281729d077919274e73532157924b4c895,a\3\a3e1ff3aad2d02a98f58d597fa19bf1826085412
+Å
+Q.idea/sonarlint/securityhotspotstore/7/9/797964a2771421b3dabc9f55e9e16bc08f6a6369,1\3\13199fd944bb7d882de7b86f620d02a25e88d06b
+Å
+Q.idea/sonarlint/securityhotspotstore/3/5/35c075371232e7a6d7c2893f452f528d008ddb9a,1\6\16eddfb8d595f34df9062aeccbcbe79112810403
+w
+G.idea/sonarlint/issuestore/d/1/d138f5281729d077919274e73532157924b4c895,f\1\f1b53e38bc8418955c101c9263d91cf5b1f51dde
+Å
+Q.idea/sonarlint/securityhotspotstore/b/5/b52ddf75bcd1abb1d59067ff18c459857ff4fc3c,3\3\33c083bde90551eef451ae0976883e3d22c7650f
