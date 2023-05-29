@@ -21,4 +21,7 @@
     <string name="website_name">Website Name</string>
     <string name="audio_message">Audio Message</string>
     <string name="record_audio">Record Audio</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="enter_your_password">Enter your Password</string>
 </resources>

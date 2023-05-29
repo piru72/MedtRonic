@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     private fun updateUI(currentUser: FirebaseUser?) {
         if (currentUser != null) {
             Log.i("LoginActivity", "Update UI Called")
-            val intent = Intent(this, SendPulseActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
         }
